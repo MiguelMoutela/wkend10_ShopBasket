@@ -1,3 +1,3 @@
 public interface Shoppable {
-    float getTotal();
+    float getTotal(ItemStock item);
 }

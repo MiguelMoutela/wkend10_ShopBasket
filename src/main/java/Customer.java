@@ -1,11 +1,11 @@
 public class Customer {
-    private Shoppable[]cart;
+    private Shoppable cart;
     private float funds;
     private boolean loyaltyCard;
     private float discount;
 
-    public Customer(float funds, boolean loyaltyCard) {
-        this.cart = new Shoppable[1];
+    public Customer(float funds, boolean loyaltyCard, Shoppable cart) {
+        this.cart = cart;
         this.funds = funds;
         this.loyaltyCard = loyaltyCard;
     }
@@ -21,11 +21,11 @@ public class Customer {
     public boolean hasLoyaltyCard(){
         return this.loyaltyCard;
     }
-    public float getTotal() {
-        return cart[0].getTotal();
+    public float getTotal(ItemStock item) {
+        return cart.getTotal(item);
     }
-    public void pay() {
-        float amountOwed = getTotal();
+    public void pay(ItemStock item) {
+        float amountOwed = getTotal(item);
         if (hasLoyaltyCard() && (this.funds > (amountOwed * (1 - this.discount)))) {
             this.funds -= amountOwed;
         }

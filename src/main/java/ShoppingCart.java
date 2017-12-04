@@ -77,7 +77,7 @@ public class ShoppingCart implements Shoppable{
         return Total;
     }
     public float getFinalTotalForCartWithOver£20Check(ItemStock item) {
-        float Total = getTotalWith2For1Considered(ItemStock item);
+        float Total = getTotalWith2For1Considered(item);
         if (Total <= 20) {
             return Total;
         }
@@ -85,13 +85,12 @@ public class ShoppingCart implements Shoppable{
             return (Total * (1 - this.discount));
         }
     }
-    public float getTotal() {
-        return getFinalTotalForCartWithOver£20Check(ItemStock item);
+    public float getTotal(ItemStock item) {
+        return getFinalTotalForCartWithOver£20Check(item);
     }
-    //    public void setAmount(Sellable item, int amount){
-//        String name = item.getName();
-//        if (checkItemIsInCart(item) == true) {
-//            cart.put(name, cart.get(name) = amount);
-//        }
-//    }
+    public void setAmount(String name, int amount){
+        if (IsItemInCart(name)) {
+            cart.put(name, amount);
+        }
+    }
 }
