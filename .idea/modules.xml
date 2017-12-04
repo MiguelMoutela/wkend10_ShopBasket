@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion.iml" filepath="$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion_main.iml" group="ShoppingBasketCodeTestDependencyInversion" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ShoppingBasketCodeTestDependencyInversion_test.iml" group="ShoppingBasketCodeTestDependencyInversion" />
+    </modules>
+  </component>
+</project>
