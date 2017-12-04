@@ -24,10 +24,11 @@ public class Customer {
     public float getTotal(ItemStock item) {
         return cart.getTotal(item);
     }
-    public void pay(ItemStock item) {
+    public void pay(ItemStock item, Shoppable cart) {
         float amountOwed = getTotal(item);
         if (hasLoyaltyCard() && (this.funds > (amountOwed * (1 - this.discount)))) {
             this.funds -= amountOwed;
+            cart.emptyCart(cart);
         }
         else if (!hasLoyaltyCard() && (this.funds > amountOwed)) {
             this.funds -= amountOwed;
